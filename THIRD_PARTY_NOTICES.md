@@ -19,3 +19,8 @@ Development-only npm dependencies (not included in the installed plugin):
 The generated wheel drawings originate in `tools/icon-source.js` and use
 the same source as the UXP SVG assets. No external font or icon package is
 required by the native wheel; it uses system fonts.
+
+The README's Mac download button includes the Apple glyph from
+[Simple Icons](https://github.com/simple-icons/simple-icons/blob/98820a4dc8c363ca72fa2c0d294ea4a0a9bba75d/icons/apple.svg),
+available under [CC0 1.0 Universal](https://github.com/simple-icons/simple-icons/blob/98820a4dc8c363ca72fa2c0d294ea4a0a9bba75d/LICENSE.md).
+This glyph is used only in repository documentation, not in the plugin.
