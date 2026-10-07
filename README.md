@@ -4,7 +4,13 @@
 
 <p align="center">Search Photoshop. Hold a shortcut. Run your next command.</p>
 
-<p align="center"><a href="https://github.com/SynkitNET/Reflex/releases">Downloads</a> · <a href="docs/usage.md">How to use</a> · <a href="CONTRIBUTING.md">Contribute</a></p>
+<p align="center"><a href="https://github.com/SynkitNET/Reflex/releases/download/v0.6.7/Reflex-0.6.7-win-x64-dev.ccx"><img src="docs/images/download-windows.svg" width="340" alt="Download Reflex for Windows x64 — CCX installer"></a> <a href="https://github.com/SynkitNET/Reflex/releases/download/v0.6.7-mac.1/Reflex-0.6.7-mac-arm64-dev.ccx"><img src="docs/images/download-mac.svg" width="340" alt="Download Reflex for Mac Apple Silicon — CCX installer"></a></p>
+
+<p align="center"><strong>v0.6.7 preview · Photoshop 26.0+ · Creative Cloud Desktop</strong><br>Mac download is for Apple Silicon (M-series). Intel Macs are not supported yet.</p>
+
+<p align="center">Close Photoshop → Open the downloaded <strong>.ccx</strong> → Confirm installation<br>Then open Photoshop → <strong>Plugins → Reflex → Reflex</strong></p>
+
+<p align="center"><a href="#download-and-install">Install help</a> · <a href="https://github.com/SynkitNET/Reflex/releases">Release notes</a> · <a href="docs/usage.md">How to use</a></p>
 
 ![Reflex floating search with the Pink accent](docs/images/search.png)
 
@@ -29,12 +35,11 @@ account is needed. Shortcuts are active only while Photoshop is active.
 
 ## Download and install
 
-**0.6.7 is a Windows development pre-release.** Requires Photoshop **26.0 or
+**0.6.7 is a development preview for Windows x64 and Mac Apple Silicon.** Requires Photoshop **26.0 or
 newer** and Creative Cloud Desktop. A clean installation on a separate machine
 still needs verification.
 
-1. Open [Releases](https://github.com/SynkitNET/Reflex/releases) and download
-   `Reflex-0.6.7-win-x64-dev.ccx` from the release assets.
+1. Download the **[Windows installer (.ccx)](https://github.com/SynkitNET/Reflex/releases/download/v0.6.7/Reflex-0.6.7-win-x64-dev.ccx)** or **[Mac Apple Silicon installer (.ccx)](https://github.com/SynkitNET/Reflex/releases/download/v0.6.7-mac.1/Reflex-0.6.7-mac-arm64-dev.ccx)**.
 2. Close Photoshop. If you used a development copy, unload it in UXP Developer
    Tools; stop the old Reflex companion if you previously installed it.
 3. Open the `.ccx` and follow the Creative Cloud installation prompts.
@@ -48,10 +53,11 @@ if Creative Cloud does not open the package.
 | Platform | Availability |
 | --- | --- |
 | Windows x64 | Development CCX; native build and automated checks pass |
-| macOS Apple Silicon | Source included; not yet built or tested |
+| macOS Apple Silicon | Signed and notarized development CCX; basic Photoshop use confirmed by a tester |
 | macOS Intel | Source included; not yet built or tested |
 
-There is no Mac download yet. [Mac build and validation details](docs/macos.md).
+Mac overlay ordering, Missing ping, live unload/reload, and broader host testing
+remain pending. [Mac build details](docs/macos.md) · [Validation results](docs/mac-validation.md).
 The image above is an interface preview with sample data.
 
 ## Quick start
@@ -61,6 +67,8 @@ The image above is an interface preview with sample data.
 | Open search | Ctrl + Alt + K |
 | Open the wheel | Hold Ctrl + Alt + W, aim, release |
 | Cancel | Escape, or return to the wheel center |
+
+On Mac, use **Option** in place of Alt.
 
 Use **Shortcuts** to record your own bindings. Use **Wheels** to choose a slot
 and assign a command, tool, menu item, or loaded Photoshop action. **Open wheel**
@@ -78,7 +86,7 @@ layers; Fill uses the foreground color.
   Reflex. It remains searchable with an explanation.
 - Command availability depends on the current document, layer, selection, and
   Photoshop version. Not every command is valid in every context.
-- Mac builds and clean-install testing remain outstanding. See the
+- Mac host validation, Intel builds, and clean-install testing remain outstanding. See the
   [release checklist](docs/release-checklist.md).
 
 ## Development

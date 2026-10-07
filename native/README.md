@@ -4,8 +4,10 @@ The shared C++20 gesture/capture engine and platform adapters implement the
 0.6.7 UXP Hybrid plugin. Windows uses Win32 input hooks and a transparent
 GDI+ wheel. macOS source uses an AppKit local event monitor and NSPanel.
 
-The Windows addon compiles. macOS compilation and host validation remain
-outstanding. See docs/macos.md and docs/release-checklist.md before release.
+The Windows and macOS arm64 addons compile. The Apple Silicon preview is
+signed and notarized; automated checks pass and a tester confirmed basic
+Photoshop use. Broader host validation and Intel builds remain outstanding.
+See docs/mac-validation.md and docs/release-checklist.md before a stable release.
 
 ## Build
 
@@ -34,6 +36,10 @@ cmake -S native -B native/build-tests -DCMAKE_TRY_COMPILE_CONFIGURATION=Release
 cmake --build native/build-tests --config Release
 ctest --test-dir native/build-tests -C Release --output-on-failure
 ```
+
+On macOS, these checks also compile the real AppKit adapter and verify that
+wheel and ping requests before startup and after repeated stop calls are
+refused safely. They do not open windows or test Photoshop interaction.
 
 ## Boundaries
 

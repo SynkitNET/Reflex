@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="88" viewBox="0 0 340 88" role="img" aria-labelledby="title desc">
+  <title id="title">Download Reflex for Windows</title>
+  <desc id="desc">Windows x64 CCX installer.</desc>
+  <rect x="2" y="4" width="336" height="80" fill="#f28fc8"/>
+  <g fill="none" stroke="#171015" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M32 25v24m-9-9 9 9 9-9M19 55v9h26v-9"/>
+  </g>
+  <g fill="#171015" font-family="Arial, Helvetica, sans-serif">
+    <text x="63" y="41" font-size="22" font-weight="700">Download for Windows</text>
+    <text x="64" y="63" font-size="12" letter-spacing="1">WINDOWS x64 · .CCX INSTALLER</text>
+  </g>
+</svg>

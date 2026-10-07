@@ -237,7 +237,9 @@ bool platformForeground() { return foreground.load(); }
 std::string platformError() { return ""; }
 bool platformOpenWheel() {
     __block bool opened = false;
-    onMain(^{ opened = monitor && runtime().openWheel(cursor(), clockMs(), 178, active()); refresh(); });
+    onMain(^{
+        if (monitor) { opened = runtime().openWheel(cursor(), clockMs(), 178, active()); refresh(); }
+    });
     return opened;
 }
 bool platformMissingPing() {
