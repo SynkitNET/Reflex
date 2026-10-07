@@ -1,0 +1,17 @@
+tests/**
+tools/**
+preview.html
+preview.js
+README.md
+.git/**
+.gitignore
+dist/**
+companion/**
+docs/**
+assets/icon-sheet.svg
+native/**
+node_modules/**
+.github/**
+package-lock.json
+CONTRIBUTING.md
+bridge.js

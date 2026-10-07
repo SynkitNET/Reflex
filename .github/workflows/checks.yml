@@ -1,0 +1,27 @@
+name: Checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  portable:
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm test
+      - run: npm run check
+      - run: cmake -S native -B native/build-tests -DCMAKE_TRY_COMPILE_CONFIGURATION=Release
+      - run: cmake --build native/build-tests --config Release
+      - run: ctest --test-dir native/build-tests -C Release --output-on-failure

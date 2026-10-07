@@ -1,0 +1,30 @@
+{
+  "name": "synkit-reflex",
+  "version": "0.6.7",
+  "license": "MIT",
+  "private": true,
+  "description": "Search and customizable quick-action wheels for Photoshop",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "assets": "node tools/assets.js && node tools/native-assets.js",
+    "preview": "node tools/preview.js",
+    "check": "node tools/check.js",
+    "package": "node tools/package-hybrid.js",
+    "package:source": "node tools/package-source.js",
+    "native:build": "node tools/build-native.js"
+  },
+  "devDependencies": {
+    "acorn": "8.18.0",
+    "jszip": "3.10.1",
+    "postcss": "8.5.29"
+  },
+  "author": "Synkit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SynkitNET/Reflex.git"
+  },
+  "homepage": "https://github.com/SynkitNET/Reflex#readme",
+  "bugs": {
+    "url": "https://github.com/SynkitNET/Reflex/issues"
+  }
+}

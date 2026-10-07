@@ -1,0 +1,16 @@
+name: Feature request
+description: Suggest an improvement to Reflex.
+title: "Feature: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: How should it work?
+    validations:
+      required: true
